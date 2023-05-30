@@ -7,17 +7,20 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />    
   </head>
   <body>
-    <div id='map' style='width: 700px; height: 500px;'></div>
+    <div id='map' style='width: 100vw; height: 100vh;'></div>
     <script>
       mapboxgl.accessToken = 'pk.eyJ1Ijoid2VjYS10aGVvIiwiYSI6ImNsaTA1YmZkbDAzbW0zcG80MGpkbnB1dnAifQ.8TLXZTUVFf7LuKfYcpJj0A';
       var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style: 'mapbox://styles/mapbox/light-v11',
         center: [-2.59, 51.45],
         maxBounds: [
-          [-6, 50], [-1, 52]
+          [-5.75, 49.95],  // SW bounds
+          [-0.91, 52.12]  // NE bounds
         ],
-        zoom: 9
+        zoom: 9,
+        maxZoom: 17,
+        minZoom: 7
       });
     </script>
   </body>
