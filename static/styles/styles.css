@@ -1,0 +1,11 @@
+#basemap_menu {
+    position: absolute;
+    background: #efefef;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#map {
+    width: 99vw; 
+    height: 90vh;
+}
