@@ -1,21 +1,29 @@
 <!doctype html>
 <html lang="en-GB">
   <head>
-    <title>WECA Minimap</title>
+    <title>WECA strategic map</title>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/x-icon" href="https://www.westofengland-ca.gov.uk/wp-content/themes/weca/assets/images/favicon/favicon-96x96.png">
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
-    <link rel="stylesheet" type="text/css" href="static/styles/styles.css">    
+    <!-- WECA Leaflet syles-->
+    <link rel="stylesheet" type="text/css" href="static/styles/styles.css">
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- Mapbox GL -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css" /> 
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
   </head>
   <body>
-    <div id='map'></div>
-    <div id="basemap_menu">
-      <input id="light-v11" type="radio" name="rtoggle" value="light" checked="checked">
-      <label for="light-v11">Light</label>
-      <input id="streets-v12" type="radio" name="rtoggle" value="streets">
-      <label for="streets-v12">Streets</label>
-    </div>
+    <div id="map"></div>
+    <!-- Mapbox-Leaflet binding-->
+    <script type="text/javascript" src="https://unpkg.com/mapbox-gl-leaflet/leaflet-mapbox-gl.js"></script>
+    <!-- Leaflet ruler plugin-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gokertanrisever/leaflet-ruler@master/src/leaflet-ruler.css" integrity="sha384-P9DABSdtEY/XDbEInD3q+PlL+BjqPCXGcF8EkhtKSfSTr/dS5PBKa9+/PMkW2xsY" crossorigin="anonymous">  
+    <script src="https://cdn.jsdelivr.net/gh/gokertanrisever/leaflet-ruler@master/src/leaflet-ruler.js" integrity="sha384-N2S8y7hRzXUPiepaSiUvBH1ZZ7Tc/ZfchhbPdvOE5v3aBBCIepq9l+dBJPFdo1ZJ" crossorigin="anonymous"></script>
+    <!-- Leaflet to PDF-->
+    <script src="static/scripts/leaflet.browser.print.min.js"></script>
+    <!-- WECA minimap layers-->
+    <!-- <script type="text/javascript" src="static/scripts/weca_minimap_layers.js"></script> -->
+    <!-- WECA minimap map-->
     <script type="text/javascript" src="static/scripts/weca_minimap.js"></script>
   </body>
 </html>
