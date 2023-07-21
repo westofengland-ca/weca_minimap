@@ -17,7 +17,7 @@ var map = L.map('map', {
     //style: 'https://api.maptiler.com/maps/streets/style.json?key=gbetYLSD5vR8MdtZ88AQ'
     style: 'mapbox://styles/mapbox/light-v11',
     attribution: '&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a>'
-  })//.addTo(map);
+  }).addTo(map);
   
   var mb_gl_dark = L.mapboxGL({
     accessToken: token,
@@ -44,10 +44,11 @@ var map = L.map('map', {
   var Stadia_AlidadeSmooth = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
       maxZoom: 20,
       attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-  }).addTo(map);
+  })//.addTo(map);
   
   var basemaps = {
     "Streets": osm,
+    "Light (MapBox)": mb_gl_light,
     "Light": Stadia_AlidadeSmooth,
     "Dark": mb_gl_dark,
     "Satellite": mb_gl_satellite
